@@ -14,3 +14,18 @@ test("somar banana + 100 deveria retornar 'Erro'", () => {
   const resultado = calculadora.somar("banana", 100);
   expect(resultado).toBe("Erro");
 });
+
+test("somar 100 + banana deveria retornar 'Erro'", () => {
+  const resultado = calculadora.somar(100, "banana");
+  expect(resultado).toBe("Erro");
+});
+
+test("somar banana + banana deveria retornar 'Erro'", () => {
+  const resultado = calculadora.somar("banana", "banana");
+  expect(resultado).toBe("Erro");
+});
+
+test("somar null + null deveria retornar 'Erro'", () => {
+  const resultado = calculadora.somar(null, null);
+  expect(resultado).toBe("Erro");
+});
