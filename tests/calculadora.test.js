@@ -1,21 +1,11 @@
-// Isso é uma forma de escrever o teste:
+const calculadora = require("../models/calculadora.js");
 
-//test("teste de test", callbackFunction);
+test("somar 2 + 2 deveria retornar 4", () => {
+  const resultado = calculadora.somar(2, 2);
+  expect(resultado).toBe(4);
+});
 
-//function callbackFunction() {
-//console.log("esta função está sendo chamada?");
-//}
-
-// Mas, atualmente se escreve assim:
-
-// test("Testando o Test Runner", () => {
-// console.log("e agora?");
-// });
-
-// test("testando outra condição do sistema", () => {
-// console.log("esse é o teste 2");
-// });
-
-test("Espero que 1 seja 1", () => {
-  expect(2).toBe(1);
+test("somar 5 + 100 deveria retornar 105", () => {
+  const resultado = calculadora.somar(5, 100);
+  expect(resultado).toBe(105);
 });
